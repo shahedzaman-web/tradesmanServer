@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "description": "backend for tradesman",
+  "scripts": {
+    "start": "node index.js"
+  },
   "main": "index.js",
   "author": "shahed zaman",
   "license": "MIT",

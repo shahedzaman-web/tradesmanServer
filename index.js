@@ -41,5 +41,5 @@ const sendPushNotification = async (targetExpoPushToken, message) => {
 app.use("/api/sendNotification", expoPushTokens);
 const PORT = process.env.PORT || 3030;
 app.listen(PORT, function () {
-  console.log(`Server started on port ${port}...`);
+  console.log(`Server started on port ${PORT}...`);
 });

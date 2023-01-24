@@ -31,7 +31,7 @@ app.post("/donate", async (req, res) => {
     // Initiate payment
     const paymentIntent = await stripe.paymentIntents.create({
       amount: Math.round(amount * 100),
-      currency: "INR",
+      currency: "CAD",
       payment_method_types: ["card"],
       metadata: { name },
     });

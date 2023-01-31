@@ -20,7 +20,7 @@ const expoPushTokens = router.post("/", async (req, res) => {
   });
 });
 
-app.post("/donate", async (req, res) => {
+app.post("/pay", async (req, res) => {
   try {
     // Getting data from client
     let { amount, name } = req.body;
@@ -95,7 +95,7 @@ const sendPushNotification = async (targetExpoPushToken, message) => {
 
 app.use("/api/sendNotification", expoPushTokens);
 
-app.post("/donate", async (req, res) => {
+app.post("/pay", async (req, res) => {
   try {
     // Getting data from client
     let { amount, name } = req.body;
@@ -121,7 +121,7 @@ app.post("/donate", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, function () {
   console.log(`Server started on port ${PORT}...`);
 });

@@ -94,11 +94,11 @@ const sendPushNotification = async (targetExpoPushToken, message) => {
 };
 
 app.use("/api/sendNotification", expoPushTokens);
-app.get("/",async(res)=>{
+app.get("/",(req, res) =>{
     try {
       res.status(200).json({ message: "Hello" });
     } catch (error) {
-      res.status(500).json({ message: "Internal Server Error" });
+      console.log({error})
     }
 })
 app.post("/pay", async (req, res) => {
